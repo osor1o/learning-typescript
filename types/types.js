@@ -1,31 +1,31 @@
 "use strict";
 // string
-var userName = 'Osorio';
+let userName = 'Osorio';
 console.log(userName);
 // userName = 28
 // numbers
-var age = 27;
+let age = 27;
 // age = 'Ana'
 age = 27.5;
 console.log(age);
 // boolean
-var hasHobbies = false;
+let hasHobbies = false;
 // hasHobbies = 1
 console.log(hasHobbies);
 // explicit
-var myAge;
+let myAge;
 myAge = 27;
 console.log(typeof myAge);
 // myAge = '27'
 // array
-var hobbies = ["Football", "eat"];
+let hobbies = ["Football", "eat"];
 console.log(hobbies[0]);
 console.log(typeof hobbies);
 hobbies = [100, 200, 300];
 // hobbies = 100
 console.log(hobbies);
 // tuples
-var address = ["Test Street", 99, ""];
+let address = ["Test Street", 99, ""];
 console.log(address);
 address = ["New Street", 1260, "Complement"];
 console.log(address);
@@ -39,13 +39,13 @@ var Color;
     Color[Color["Yellow"] = 12] = "Yellow";
     Color[Color["Red"] = 100] = "Red";
 })(Color || (Color = {}));
-var minhaColor = Color.Green;
+let minhaColor = Color.Green;
 console.log(minhaColor);
 console.log(Color.Blue);
 console.log(Color.Orange, Color.Yellow);
 console.log(Color.Green, Color.Red);
 // any
-var car = 'BMW';
+let car = 'BMW';
 console.log(car);
 car = { marca: 'BMW', year: 2019 };
 console.log(car);
@@ -66,13 +66,13 @@ function multi(numA, numB) {
 // console.log(multi(2, 'Test'))
 console.log(multi(4.7, 9));
 // type function
-var calc;
+let calc;
 // calc = sayHello
 // calc()
 calc = multi;
 console.log(calc(5, 6));
 // objects
-var user = {
+let user = {
     name: 'osor1o',
     age: 23
 };
@@ -87,17 +87,17 @@ user = {
     name: 'test'
 };
 console.log(user);
-var employeer = {
+let employeer = {
     supervisors: ['s1', 's2'],
-    hitPoint: function (hour) {
+    hitPoint: (hour) => {
         if (hour <= 8)
             return 'normal';
         return 'out';
     }
 };
-var employeer2 = {
+let employeer2 = {
     supervisors: ['s3', 's4'],
-    hitPoint: function (hour) {
+    hitPoint: (hour) => {
         if (hour <= 8)
             return 'normal';
         return 'out';
@@ -105,14 +105,14 @@ var employeer2 = {
 };
 console.log(employeer.supervisors, employeer.hitPoint(5));
 // Union Types
-var value = 10;
-console.log("value is: " + value);
+let value = 10;
+console.log(`value is: ${value}`);
 value = '10';
-console.log("value is: " + value);
+console.log(`value is: ${value}`);
 // value = true
 // console.log(`value is: ${value}`);
 // Check types
-var newValue = 30;
+let newValue = 30;
 if (typeof newValue === 'number') {
     console.log('is a number!');
 }
@@ -137,28 +137,28 @@ else {
 // }
 // product.validate()
 // strict null
-var price = 12;
+let price = 12;
 // price = null
-var optionalPrice = 12;
+let optionalPrice = 12;
 optionalPrice = null;
-var contact1 = {
+const contact1 = {
     name: 'contract name',
     tel1: '123',
     tel2: null,
 };
 console.log(contact1.name, contact1.tel1, contact1.tel2);
-var allowNull = null;
+let allowNull = null;
 allowNull = 12;
 console.log(allowNull);
 allowNull = 'abc';
 console.log(allowNull);
-var bankAccount1 = {
+let bankAccount1 = {
     balance: 3456,
-    deposit: function (value) {
+    deposit(value) {
         this.balance += value;
     }
 };
-var accountHolder = {
+let accountHolder = {
     name: 'Ana Silva',
     bankAccount: bankAccount1,
     contacts: ['34567890', '98765432']
