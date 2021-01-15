@@ -81,3 +81,29 @@ console.log(Math.max(...numbers));
 const group1: string[] = ["a", "b", "c", "d"];
 const group2: string[] = ["e", ...group1, "f", "g"];
 console.log(group2);
+
+// Destructuring
+const items = [1, 2];
+// const item1 = items[0];
+// const item2 = items[1];
+const [item1, item2] = items;
+console.log(item1);
+console.log(item2);
+
+const item = {
+  name: "SSD 480GB",
+  price: 670,
+  data: {
+    w: "import",
+  },
+};
+// const itemName = item.name;
+// const itemPrice = item.price;
+const {
+  name: n,
+  price: p,
+  data: { w },
+} = item;
+console.log(n);
+console.log(p);
+console.log(w);
